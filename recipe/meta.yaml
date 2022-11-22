@@ -20,33 +20,30 @@ requirements:
   build:
     - {{ compiler('c') }}
     - python
-    - pytorch-base           {{ pytorch }}     
+    - pytorch           {{ pytorch }}
   host:
     - pip
-    - pytorch-base           {{ pytorch }}
+    - pytorch           {{ pytorch }}
     - python
   run:
     - hjson-py
-    - ninja
+    - ninja             {{ ninja }}
     - numpy             {{ numpy }}
     - packaging
-    - psutil
+    - psutil            {{ psutil }}
     - py-cpuinfo
-    - pydantic
-    - tqdm
-    - pytorch-base           {{ pytorch }}
+    - pydantic          {{ pydantic }}
+    - tqdm              {{ tqdm }}
+    - pytorch           {{ pytorch }}
 
 about:
   home: https://github.com/microsoft/DeepSpeed.git 
   license: MIT
   license_file: LICENSE
-  summary: NVIDIA Collective Communications Library. Implements multi-GPU and multi-node
-           collective communication primitives for NVIDIA GPUs.
-  description: |
-    NCCL (pronounced "Nickel") is a stand-alone library of standard collective communication
-    routines for GPUs, implementing all-reduce, all-gather, reduce, broadcast, and reduce-scatter.
+  summary: 'DeepSpeed Library: An easy-to-use deep learning optimization software suite.'
+  description: 'DeepSpeed Library: An easy-to-use deep learning optimization software suite.'
   doc_url: https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html
-  dev_url: https://github.com/microsoft/DeepSpeed.git 
+  dev_url: https://github.com/microsoft/DeepSpeed.git
 
 extra:
   recipe-maintainers:
