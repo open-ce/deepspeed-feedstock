@@ -42,7 +42,7 @@ about:
   license_file: LICENSE
   summary: 'DeepSpeed Library: An easy-to-use deep learning optimization software suite.'
   description: 'DeepSpeed Library: An easy-to-use deep learning optimization software suite.'
-  doc_url: https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html
+  doc_url: https://deepspeed.readthedocs.io/
   dev_url: https://github.com/microsoft/DeepSpeed.git
 
 extra:
