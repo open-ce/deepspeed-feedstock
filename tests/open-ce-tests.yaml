@@ -10,9 +10,10 @@ tests:
     command: |
         cd DeepSpeed
         TESTSUITES_TO_RUN=(
-                      tests/unit/comm/test_dist.py
-                      tests/unit/ops/cuda/test_cuda_forward.py
                       tests/unit/autotuning/test_autotuning.py
+                      tests/unit/launcher/test_ds_arguments.py
+                      tests/unit/launcher/test_run.py
+                      tests/unit/utils/test_get_optim_files.py
         )
         for test_suite in "${TESTSUITES_TO_RUN[@]}"
         do
@@ -21,4 +22,4 @@ tests:
 
         pytest -v ${TEST_SUITES}		
   - name: Clean tests
-    command: rm -rf DeepSpeed
+    command: rm -rf DeepSpeed DeepSpeedExamples
